@@ -1,0 +1,26 @@
+def iterative_power(x, n):
+    result = 1
+
+    for i in range(n):
+        result *= x
+
+    return result
+
+
+def fast_power(x, n):
+    if n == 0:
+        return 1
+
+    half = fast_power(x, n // 2)
+
+    if n % 2 == 0:
+        return half * half
+    else:
+        return x * half * half
+
+
+x = 2
+n = 10
+
+print("Iterative Power:", iterative_power(x, n))
+print("Recursive Fast Power:", fast_power(x, n))

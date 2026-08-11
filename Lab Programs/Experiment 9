@@ -1,0 +1,13 @@
+# GCD using Euclidean Algorithm (Recursive)
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    return gcd(b, a % b)
+
+# Main Program
+a = 48
+b = 18
+print("Name: Sree")
+print("Register Number:192524023")
+print("GCD =", gcd(a, b))
